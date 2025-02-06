@@ -1,0 +1,42 @@
+Kubernetes is an open-source platform that automates the management, scaling, and deployment of containerized applications. It's also known as "k8s". 
+-Provides highly resilient infrastructure with zero downtime deployment capabilities
+-Automatic rollback(previous version)
+-scaling
+-selfhealing of containers(which consists of auto-placement,auto-restart,auto replication and scaling of containers on the basis of CPU usage)
+-------------------------------------
+Cluster
+---------
+Manager Node components(Server)
+-API Server
+-Controller manager
+-Scheduler
+-etcd
+Worker Node components(Server)
+-kubectl
+-kube-proxy
+-pod
+-containers
+---------------------------------------
+Pods(Collection of containers)
+Deployment(Collection of pods)
+Services
+Ingress Controller
+Configmaps
+Secrets
+Namespaces
+Persistent Volumes
+Persistent Volume Clamis
+Statefulsets
+
+Command
+--------
+kubectl get nodes
+kubectl get nodes -o wide
+kubectl create -f <manifest_file>
+kubectl get pods
+kubectl get pods -o wide
+kubectl get deployment
+kubectl get deployment -o wide
+kubectl logs -f <pod_name>
+
+
