@@ -106,8 +106,11 @@ The default namespace is where most objects are created by default.
 The kube-system namespace contains system-related objects created by kubernetes itself.
 The kube-public namespace is publicly readable and contains cluster-wide resources.
 The kube-node-lease namespace is used by kubernetes nodes to communicate their lease status.
-
+------------------------------------
 Persistent Volumes
+------------------------------------
+
+
 Persistent Volume Clamis
 Statefulsets
 
@@ -145,3 +148,4 @@ kubectl create namespace <my-namespace>
 kubectl logs -f <pod_name>
 
 
+t1
