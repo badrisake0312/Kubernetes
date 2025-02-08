@@ -139,6 +139,18 @@ Jobs
 A Job is a controller object that creates one or more pod to perform a specific task and ensure that the task is completed sucessfully.
 Unlike other controller objects like deployments or replicasets, which maintain a specified number of replicas running at all times, a job is designed for short-lived tasks or batch processing.
 Joba are designed to run one or more pods to perform a task and then terminate when the task is completed, they are ideal for running batch jobs or tasks that need to be executed once.
+---------------------------
+Horizontal Pod AutoScaler
+---------------------------
+HPA Automatically adjusts the number of replicas of a deployment, replicaset, or statefulset based on observed CPU utilization or custom metrics.
+it ensures that there are enough replicas to handle the incoming traffic and prevent overloding the cluster.
+When CPU or custom metrics exceed the defined thresholds, HPA scales up the replicas, and when the metrics decrease, it scales down the replicas.
+Metrics
+kubectl get all -n kube-system
+-------------------------
+Cluster Autoscaling
+-------------------------
+
 Command
 --------
 kubectl get all -A --> shows all the data in cluster
