@@ -148,10 +148,23 @@ When CPU or custom metrics exceed the defined thresholds, HPA scales up the repl
 Metrics
 kubectl get all -n kube-system
 -------------------------
-Cluster Autoscaling
+Cluster Autoscaler
 -------------------------
+CA Automatically adjusts the size of the kubernetes cluster by adding or removing nodes based on the resource demands of the pods.
+It ensures that there are enough resources available in the cluster to accommodate the scheduled pods.
+-------------------------
+LimitRange
+-------------------------
+LimitRanges are used to specify constraints on the resource request and limits for pods in a namespace.
+They help prevent pods from using excessive resources or ensure that all pods have minimum resources guarantees.
+Specific to containers
+-------------------------
+ResourceQuota
+-------------------------
+ResourceQuota are used to limit the total amount of compute resource (CPU and Memory) that can be used with in a namespace.
+They help to control the resource consumption of all pods and containers within that namespaces.
 
-Command
+Commands
 --------
 kubectl get all -A --> shows all the data in cluster
 kubectl get nodes
@@ -188,4 +201,8 @@ kubectl edit pv <disk_name>
 kubectl edit pvc <disk_name>
 kubectl get daemonset
 kubectl get jobs
+kubectl get hpa
+kubectl get limitrange
+kubectl describe limitrange
+
 kubectl logs -f <pod_name>
